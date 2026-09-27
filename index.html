@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Technical Documentation Template</title>
+
+https://fonts.googleapis.com
+https://fonts.gstatic.com
+
+https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap
+
+<style>
+
+:root {
+
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+
+    --bg: #f8fafc;
+    --surface: #ffffff;
+
+    --text: #1e293b;
+    --text-light: #64748b;
+
+    --border: #e2e8f0;
+
+    --info: #0284c7;
+    --warning: #d97706;
+    --critical: #dc2626;
+    --tip: #16a34a;
+
+    --sidebar: #0f172a;
+
+    --shadow:
+        0 8px 24px rgba(15,23,42,.08);
+
+    --radius: 18px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.8;
+}
+
+/****************************************
+HEADER
+****************************************/
+
+.hero{
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #0891b2,
+            #7c3aed
+        );
+
+    color:white;
+
+    padding:100px 40px;
+}
+
+.hero-content{
+    max-width:1200px;
+    margin:auto;
+}
+
+.badge{
+
+    display:inline-block;
+
+    background:
+        rgba(255,255,255,.15);
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:.8rem;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.hero h1{
+
+    margin-top:20px;
+
+    font-size:4rem;
+
+    line-height:1.1;
+}
+
+.hero p{
+
+    margin-top:20px;
+
+    max-width:800px;
+
+    font-size:1.2rem;
+}
+
+/****************************************
+LAYOUT
+****************************************/
+
+.container{
+
+    max-width:1500px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        280px
+        1fr;
+
+    gap:30px;
+
+    padding:40px;
+}
+
+@media(max-width:1100px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        display:none;
+    }
+}
+
+/****************************************
+SIDEBAR
+****************************************/
+
+.sidebar{
+
+    position:sticky;
+    top:20px;
+
+    height:fit-content;
+
+    background:var(--sidebar);
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:20px;
+}
+
+.sidebar h3{
+
+    margin-bottom:20px;
+    font-size:1rem;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar li{
+    margin-bottom:12px;
+}
+
+.sidebar a{
+
+    color:#cbd5e1;
+
+    text-decoration:none;
+}
+
+.sidebar a:hover{
+    color:white;
+}
+
+/****************************************
+CONTENT
+****************************************/
+
+.content{
+
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.section{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+}
+
+.section h2{
+
+    margin-bottom:20px;
+
+    font-size:2rem;
+}
+
+.section h3{
+
+    margin-top:25px;
+    margin-bottom:10px;
+}
+
+/****************************************
+INFO BOXES
+****************************************/
+
+.callout{
+
+    border-left:6px solid;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    margin:20px 0;
+}
+
+.info{
+
+    background:#f0f9ff;
+    border-color:var(--info);
+}
+
+.warning{
+
+    background:#fff7ed;
+    border-color:var(--warning);
+}
+
+.critical{
+
+    background:#fef2f2;
+    border-color:var(--critical);
+}
+
+.tip{
+
+    background:#f0fdf4;
+    border-color:var(--tip);
+}
+
+/****************************************
+TABLES
+****************************************/
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+}
+
+thead{
+
+    background:
+        linear-gradient(
+            90deg,
+            #2563eb,
+            #0891b2
+        );
+
+    color:white;
+}
+
+th,td{
+
+    padding:14px;
+
+    text-align:left;
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+tbody tr:hover{
+    background:#f8fafc;
+}
+
+/****************************************
+CODE
+****************************************/
+
+pre{
+
+    background:#0f172a;
+
+    color:#e2e8f0;
+
+    border-radius:14px;
+
+    padding:24px;
+
+    overflow:auto;
+
+    margin-top:15px;
+}
+
+code{
+    font-family:Consolas,monospace;
+}
+
+/****************************************
+FIGURES
+****************************************/
+
+figure{
+    margin-top:25px;
+}
+
+figure img{
+
+    width:100%;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.15);
+}
+
+figcaption{
+
+    text-align:center;
+
+    color:var(--text-light);
+
+    margin-top:10px;
+
+    font-style:italic;
+}
+
+/****************************************
+LINKS
+****************************************/
+
+a{
+
+    color:var(--primary);
+}
+
+a:hover{
+
+    color:var(--primary-dark);
+}
+
+/****************************************
+CARDS
+****************************************/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(240px,1fr)
+        );
+
+    gap:20px;
+}
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    border:1px solid var(--border);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/****************************************
+FOOTER
+****************************************/
+
+footer{
+
+    text-align:center;
+
+    padding:50px;
+
+    color:var(--text-light);
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+
+<div class="hero-content">
+
+<span class="badge">
+TECHNICAL DOCUMENTATION
+</span>
+
+<h1>
+Apache Airflow Deployment Guide
+</h1>
+
+<p>
+Installation, architecture, operations, monitoring,
+security, and troubleshooting.
+</p>
+
+</div>
+
+</header>
+
+<div class="container">
+
+<nav class="sidebar">
+
+<h3>Contents</h3>
+
+<ul>
+
+<li>#overviewOverview</a></li>
+<li>#architectureArchitecture</a></li>
+<li>#requirementsRequirements</a></li>
+<li>#installationInstallation</a></li>
+<li>#validationValidation</a></li>
+<li>#troubleshootingTroubleshooting</a></li>
+<li>#referencesReferences</a></li>
+
+</ul>
+
+</nav>
+
+<main class="content">
+
+<section id="overview" class="section">
+
+<h2>Overview</h2>
+
+<p>
+This document describes the recommended deployment
+architecture and operational procedures for Apache Airflow.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏗 Architecture</h3>
+<p>Reference design and topology.</p>
+</div>
+
+<div class="card">
+<h3>🔒 Security</h3>
+<p>Authentication and RBAC.</p>
+</div>
+
+<div class="card">
+<h3>📊 Monitoring</h3>
+<p>Metrics and observability.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="architecture" class="section">
+
+<h2>Target Architecture</h2>
+
+<p>
+The environment consists of Airflow, PostgreSQL,
+Redis and monitoring components.
+</p>
+
+<table>
+
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+<th>Port</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Airflow Scheduler</td>
+<td>Workflow Scheduling</td>
+<td>8080</td>
+</tr>
+
+<tr>
+<td>PostgreSQL</td>
+<td>Metadata Database</td>
+<td>5432</td>
+</tr>
+
+<tr>
+<td>Redis</td>
+<td>Broker</td>
+<td>6379</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<figure>
+
+images/architecture.png
+
+<figcaption>
+Figure 1. High-level architecture
+</figcaption>
+
+</figure>
+
+</section>
+
+<section id="requirements" class="section">
+
+<h2>Requirements</h2>
+
+<div class="callout info">
+
+<strong>INFO</strong><br>
+All servers must have network access to PostgreSQL and Redis.
+
+</div>
+
+<div class="callout warning">
+
+<strong>WARNING</strong><br>
+Verify firewall and SELinux policies before deployment.
+
+</div>
+
+<div class="callout critical">
+
+<strong>CRITICAL</strong><br>
+Do not store passwords, tokens or secrets directly in code repositories.
+
+</div>
+
+<div class="callout tip">
+
+<strong>TIP</strong><br>
+Use a centralized secrets manager whenever possible.
+
+</div>
+
+</section>
+
+<section id="installation" class="section">
+
+<h2>Installation Procedure</h2>
+
+<h3>Step 1 - Create Virtual Environment</h3>
+
+<pre><code>python3 -m venv airflow
+source airflow/bin/activate</code></pre>
+
+<h3>Step 2 - Install Airflow</h3>
+
+<pre><code>pip install apache-airflow</code></pre>
+
+<h3>Step 3 - Initialize Database</h3>
+
+<pre><code>airflow db migrate</code></pre>
+
+</section>
+
+<section id="validation" class="section">
+
+<h2>Validation</h2>
+
+<p>
+Run the following commands to verify service status.
+</p>
+
+<pre><code>systemctl status airflow-scheduler
+
+systemctl status airflow-api-server</code></pre>
+
+</section>
+
+<section id="troubleshooting" class="section">
+
+<h2>Troubleshooting</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Error</th>
+<th>Root Cause</th>
+<th>Resolution</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td>Connection Refused</td>
+<td>Port blocked</td>
+<td>Review firewall rules</td>
+</tr>
+
+<tr>
+<td>Database Timeout</td>
+<td>Database unavailable</td>
+<td>Validate connectivity</td>
+</tr>
+
+<tr>
+<td>Scheduler Failed</td>
+<td>Service stopped</td>
+<td>Restart service</td>
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<section id="references" class="section">
+
+<h2>References</h2>
+
+<ul>
+
+<li>
+https://airflow.apache.org/docs/
+Apache Airflow Documentation
+</a>
+</li>
+
+<li>
+https://prometheus.io/docs/
+Prometheus Documentation
+</a>
+</li>
+
+<li>
+https://grafana.com/docs/
+Grafana Documentation
+</a>
+</li>
+
+</ul>
+
+</section>
+
+</main>
+
+</div>
+
+<footer>
+
+Version 1.0 • Technical Documentation Template
+
+</footer>
+
+</body>
+</html>
